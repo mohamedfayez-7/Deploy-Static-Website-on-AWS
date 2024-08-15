@@ -1,18 +1,20 @@
- Hosting a Static Website on AWS Using CloudFront and S3
+---
 
- Overview
+# Hosting a Static Website on AWS Using CloudFront and S3
+
+## Overview
 
 This guide explains how to host a static website on Amazon Web Services (AWS) using an S3 bucket for storage and CloudFront for content delivery.
 
- Prerequisites
+## Prerequisites
 
 - AWS Account
 - AWS CLI installed and configured (optional, for command-line operations)
 - Basic understanding of AWS services (S3, CloudFront)
 
- Steps
+## Steps
 
- 1. Create an S3 Bucket
+### 1. Create an S3 Bucket
 
 1. **Log in to AWS Management Console**:
    Go to the [S3 Console](https://console.aws.amazon.com/s3/).
@@ -53,7 +55,7 @@ This guide explains how to host a static website on Amazon Web Services (AWS) us
      }
      ```
 
- 2. Set Up CloudFront Distribution
+### 2. Set Up CloudFront Distribution
 
 1. **Create a CloudFront Distribution**:
    - Go to the [CloudFront Console](https://console.aws.amazon.com/cloudfront/).
@@ -74,7 +76,7 @@ This guide explains how to host a static website on Amazon Web Services (AWS) us
    - Click "Create Distribution."
    - Wait for the distribution status to become "Deployed."
 
- 3. Update DNS Settings
+### 3. Update DNS Settings
 
 1. **Get the CloudFront Distribution Domain Name**:
    - In the CloudFront Console, locate your distribution and copy the domain name (e.g., `d1234abcd8e0f.cloudfront.net`).
@@ -83,19 +85,21 @@ This guide explains how to host a static website on Amazon Web Services (AWS) us
    - Go to your DNS provider’s management console.
    - Create a CNAME record that points your domain name (e.g., `www.example.com`) to the CloudFront distribution domain name.
 
- Testing
+## Testing
 
 - Visit your domain name (e.g., `www.example.com`) to verify that your static website is being served correctly through CloudFront.
 
- Troubleshooting
+## Troubleshooting
 
 - **Content Not Loading**: Ensure that the S3 bucket policy allows public access and that the CloudFront distribution is correctly configured.
 - **404 Errors**: Check that the `index.html` file is correctly named and uploaded in the S3 bucket.
 
- Security Considerations
+## Security Considerations
 
 - **S3 Bucket Permissions**: Regularly review and update bucket policies to ensure that only the necessary permissions are granted.
 - **CloudFront Settings**: Utilize HTTPS to secure data in transit and configure caching to optimize performance.
+
+---
 
 S3 Bucket Website Hosting Endpoint:
 http://my-748515101939-bucket.s3-website-us-east-1.amazonaws.com
