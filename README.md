@@ -6,6 +6,8 @@
 
 This guide explains how to host a static website on Amazon Web Services (AWS) using an S3 bucket for storage and CloudFront for content delivery.
 
+![Udagram Infrastructure](https://github.com/mohamedfayez-7/Deploy-Static-Website-on-AWS/blob/c396f18c7a1c4ec0d489f865c076c04e2e2628b1/cf%20and%20stataic.png)
+
 ## Prerequisites
 
 - AWS Account
